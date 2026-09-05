@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Generate Free Fire access tokens easily with Narayan Verma's Access Generator. Extract Eat tokens from kiosgamer URLs and get your FF token instantly." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Generate Free Fire access tokens easily with Narayan Verma's Access Generator. Extract Eat tokens from kiosgamer URLs and get your FF token instantly.">
   <meta name="google-site-verification" content="qzVNIIPBo113_dzwY5oR37s4zWrX353ihmVUhQr_cK0" />
   <title>Free Fire Eat To access Token Tool | Narayan Verma</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* ----- imports & reset ----- */
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
       --primary: #06b6d4;
       --primary-glow: rgba(6, 182, 212, 0.35);
       --secondary: #8b5cf6;
       --dark-bg: #0a0a12;
     }
-
     body {
       font-family: 'Space Grotesk', sans-serif;
       background-color: var(--dark-bg);
@@ -35,35 +26,29 @@
       justify-content: center;
       overflow-x: hidden;
       padding: 20px;
-      background-image:
-        radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+      background-image: radial-gradient(ellipse at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(139,92,246,0.05) 0%, transparent 50%);
     }
-
-    /* ----- cyber card (glass) ----- */
     .cyber-card {
-      background: rgba(10, 10, 18, 0.85);
+      background: rgba(10,10,18,0.85);
       backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.06);
       border-radius: 24px;
-      box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      box-shadow: 0 20px 60px -10px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
       position: relative;
       overflow: hidden;
     }
-
     .cyber-card::before {
       content: "";
       position: absolute;
       inset: 0;
       border-radius: 24px;
       padding: 1px;
-      background: linear-gradient(180deg, rgba(6, 182, 212, 0.2), transparent 50%, rgba(139, 92, 246, 0.1));
+      background: linear-gradient(180deg,rgba(6,182,212,0.2),transparent 50%,rgba(139,92,246,0.1));
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
     }
-
     .cyber-card::after {
       content: "";
       position: absolute;
@@ -71,129 +56,142 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: conic-gradient(from 0deg at 50% 50%, transparent 0%, rgba(6, 182, 212, 0.03) 25%, transparent 50%, rgba(139, 92, 246, 0.03) 75%, transparent 100%);
+      background: conic-gradient(from 0deg at 50% 50%, transparent 0%, rgba(6,182,212,0.03) 25%, transparent 50%, rgba(139,92,246,0.03) 75%, transparent 100%);
       animation: rotateGlow 20s linear infinite;
       pointer-events: none;
     }
-
     @keyframes rotateGlow {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
     .title-font {
       font-family: 'Rajdhani', sans-serif;
     }
-
     .cyber-input {
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.08);
       color: #fff;
       font-family: monospace;
       transition: all 0.3s ease;
       border-radius: 12px;
     }
-
     .cyber-input:focus {
       border-color: var(--primary);
-      background: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 0 30px var(--primary-glow), inset 0 0 30px rgba(6, 182, 212, 0.05);
+      background: rgba(0,0,0,0.7);
+      box-shadow: 0 0 30px var(--primary-glow), inset 0 0 30px rgba(6,182,212,0.05);
       outline: none;
     }
-
     .btn-grad {
-      background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #06b6d4 100%);
+      background: linear-gradient(135deg,#06b6d4 0%,#8b5cf6 50%,#06b6d4 100%);
       background-size: 200% auto;
       transition: 0.5s;
       border: none;
-      box-shadow: 0 0 30px rgba(6, 182, 212, 0.25);
+      box-shadow: 0 0 30px rgba(6,182,212,0.25);
       border-radius: 12px;
     }
-
     .btn-grad:hover {
       background-position: right center;
-      box-shadow: 0 0 50px rgba(6, 182, 212, 0.4), 0 0 80px rgba(139, 92, 246, 0.2);
+      box-shadow: 0 0 50px rgba(6,182,212,0.4), 0 0 80px rgba(139,92,246,0.2);
       transform: translateY(-2px);
     }
-
     .social-icon-btn {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
       transition: 0.2s;
       border-radius: 10px;
     }
-
     .social-icon-btn:hover {
-      background: rgba(6, 182, 212, 0.1);
-      border-color: rgba(6, 182, 212, 0.3);
+      background: rgba(6,182,212,0.1);
+      border-color: rgba(6,182,212,0.3);
       transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+      box-shadow: 0 0 20px rgba(6,182,212,0.1);
     }
-
     .modal-overlay {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(8px);
       opacity: 0;
       visibility: hidden;
       transition: 0.3s;
     }
-
     .modal-overlay.active {
       opacity: 1;
       visibility: visible;
     }
-
-    .scroll-box,
-    .scroll-box-large,
-    .scroll-box-token {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%);
+    .animate-in {
+      animation: fadeIn 0.4s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .tutorial-link {
+      background: rgba(6,182,212,0.08);
+      border: 1px dashed rgba(6,182,212,0.3);
+      transition: all 0.2s;
+      border-radius: 12px;
+    }
+    .tutorial-link:hover {
+      background: rgba(6,182,212,0.15);
+      border-color: #06b6d4;
+      box-shadow: 0 0 30px rgba(6,182,212,0.05);
+    }
+    .copy-btn-success {
+      background-color: #10b981 !important;
+      transition: 0.2s;
+    }
+    .scroll-box {
+      background: linear-gradient(135deg,rgba(139,92,246,0.12)0%,rgba(6,182,212,0.08)100%);
       border-left: 3px solid #06b6d4;
+      max-height: 120px;
+      overflow-y: auto;
+      padding: 12px;
       border-radius: 8px;
       font-family: monospace;
       font-size: 11px;
       word-break: break-all;
       color: #fff;
-      padding: 12px;
-      overflow-y: auto;
     }
-
-    .scroll-box { max-height: 120px; }
-    .scroll-box-large { max-height: 250px; white-space: pre-wrap; }
-    .scroll-box-token { max-height: 150px; }
-
+    .scroll-box-large {
+      background: linear-gradient(135deg,rgba(139,92,246,0.12)0%,rgba(6,182,212,0.08)100%);
+      border-left: 3px solid #06b6d4;
+      max-height: 250px;
+      overflow-y: auto;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 11px;
+      word-break: break-all;
+      color: #fff;
+      white-space: pre-wrap;
+    }
     .scroll-box::-webkit-scrollbar,
     .scroll-box-large::-webkit-scrollbar,
     .scroll-box-token::-webkit-scrollbar {
       width: 4px;
     }
-
     .scroll-box::-webkit-scrollbar-track,
     .scroll-box-large::-webkit-scrollbar-track,
     .scroll-box-token::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255,255,255,0.03);
       border-radius: 4px;
     }
-
     .scroll-box::-webkit-scrollbar-thumb,
     .scroll-box-large::-webkit-scrollbar-thumb,
     .scroll-box-token::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+      background: linear-gradient(180deg,#06b6d4,#8b5cf6);
       border-radius: 4px;
     }
-
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
-
     .info-item {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
       border-radius: 10px;
       padding: 8px 12px;
     }
-
     .info-item .label {
       font-size: 9px;
       text-transform: uppercase;
@@ -201,7 +199,6 @@
       letter-spacing: 0.5px;
       font-weight: 600;
     }
-
     .info-item .value {
       font-size: 13px;
       font-weight: 600;
@@ -209,300 +206,301 @@
       margin-top: 2px;
       font-family: monospace;
     }
-
-    .tutorial-link {
-      background: rgba(6, 182, 212, 0.08);
-      border: 1px dashed rgba(6, 182, 212, 0.3);
-      transition: all 0.2s;
-      border-radius: 12px;
+    .scroll-box-token {
+      background: linear-gradient(135deg,rgba(139,92,246,0.12)0%,rgba(6,182,212,0.08)100%);
+      border-left: 3px solid #06b6d4;
+      max-height: 150px;
+      overflow-y: auto;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 11px;
+      word-break: break-all;
+      color: #fff;
     }
-
-    .tutorial-link:hover {
-      background: rgba(6, 182, 212, 0.15);
-      border-color: #06b6d4;
-      box-shadow: 0 0 30px rgba(6, 182, 212, 0.05);
-    }
-
-    .copy-btn-success {
-      background-color: #10b981 !important;
-      transition: 0.2s;
-    }
-
     .logo-glow {
-      box-shadow: 0 0 60px rgba(6, 182, 212, 0.2), 0 0 120px rgba(139, 92, 246, 0.1);
+      box-shadow: 0 0 60px rgba(6,182,212,0.2), 0 0 120px rgba(139,92,246,0.1);
     }
-
     .glow-text {
-      background: linear-gradient(135deg, #06b6d4, #8b5cf6, #06b6d4);
+      background: linear-gradient(135deg,#06b6d4,#8b5cf6,#06b6d4);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shimmerText 3s linear infinite;
     }
-
     @keyframes shimmerText {
       0% { background-position: 0% center; }
       100% { background-position: 200% center; }
     }
-
-    .animate-in {
-      animation: fadeIn 0.4s ease forwards;
+    /* Social icons - only icon, no text */
+    .social-icon-only {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
+    .social-icon-only:hover {
+      background: rgba(6,182,212,0.08);
+      border-color: rgba(6,182,212,0.25);
+      transform: translateY(-2px);
+    }
+    .social-icon-only img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
-
-<div class="w-full max-w-[480px] relative z-10">
-
-  <div class="cyber-card p-6 sm:p-8">
-
-    <div class="flex flex-col items-center mb-6">
-      <div class="relative w-20 h-20 mb-3 rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 to-purple-500 logo-glow">
-        <div class="w-full h-full rounded-full bg-[#0a0a12] flex items-center justify-center">
-          <span class="text-2xl font-bold text-white tracking-wider" style="font-family:'Rajdhani',sans-serif;">NV</span>
-        </div>
-      </div>
-      <h1 class="text-2xl font-bold title-font text-center leading-tight">
-        <span class="text-white">ACCESS GENERATOR</span><br>
-        <span class="glow-text text-lg font-normal">by Narayan Verma</span>
-      </h1>
-    </div>
-
-    <a href="https://youtu.be/tehenN6aR08" target="_blank"
-       class="tutorial-link w-full flex items-center justify-between gap-2 p-3 rounded-xl mb-6 transition group">
-      <div class="flex items-center gap-3">
-        <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
-          <i class="fab fa-youtube text-red-500 text-sm"></i>
-        </div>
-        <div class="text-left">
-          <span class="text-[11px] font-bold text-white uppercase tracking-wider">WATCH TUTORIAL</span>
-          <p class="text-[9px] text-gray-400">click to watch how to get access token</p>
-        </div>
-      </div>
-      <i class="fas fa-arrow-right text-cyan-400 group-hover:translate-x-1 transition"></i>
-    </a>
-
-    <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6">
-      <div class="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
-        <i class="fas fa-book-open text-cyan-400 text-xs"></i>
-        <span class="text-xs font-bold text-white uppercase tracking-wider">How to use</span>
-      </div>
-      <div class="space-y-4">
-        <div class="flex gap-3 text-[11px] text-gray-400">
-          <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">1</span>
-          <div>
-            <p>Select Provider & Login below.</p>
-            <p class="text-[10px] text-green-500 mt-0.5">
-              <i class="fas fa-shield-alt"></i> Safe: Official Garena Server (No Scam Risk)
-            </p>
+  <div class="w-full max-w-[480px] relative z-10">
+    <div class="cyber-card p-6 sm:p-8">
+      <div class="flex flex-col items-center mb-6">
+        <div class="relative w-20 h-20 mb-3 rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 to-purple-500 logo-glow">
+          <div class="w-full h-full rounded-full bg-[#0a0a12] flex items-center justify-center">
+            <span class="text-2xl font-bold text-white tracking-wider" style="font-family:'Rajdhani',sans-serif;">NV</span>
           </div>
         </div>
-        <div class="flex gap-3 text-[11px] text-gray-400">
-          <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">2</span>
-          <div class="w-full">
-            <p class="mb-2">After login, copy the URL containing <code class="text-cyan-300">eat=</code> parameter</p>
-            <div class="bg-cyan-500/5 border border-cyan-500/10 p-2 rounded mb-2">
-              <p class="text-[10px] text-gray-400 mb-1">Example URL:</p>
-              <code class="text-[9px] text-gray-300 break-all block leading-tight">
-                https://discstore.kiosgamer.com.id/?eat=14f060774299fb93a5...&lang=en&region=IND&account_id=7669969208&nickname=...
-              </code>
+        <h1 class="text-2xl font-bold title-font text-center leading-tight">
+          <span class="text-white">ACCESS GENERATOR</span><br>
+          <span class="glow-text text-lg font-normal">by Narayan Verma</span>
+        </h1>
+      </div>
+
+      <!-- TUTORIAL LINK -->
+      <a href="https://youtu.be/tehenN6aR08" target="_blank" class="tutorial-link w-full flex items-center justify-between gap-2 p-3 rounded-xl mb-6 transition group">
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
+            <i class="fab fa-youtube text-red-500 text-sm"></i>
+          </div>
+          <div class="text-left">
+            <span class="text-[11px] font-bold text-white uppercase tracking-wider">WATCH TUTORIAL</span>
+            <p class="text-[9px] text-gray-400">click to watch how to get access token</p>
+          </div>
+        </div>
+        <i class="fas fa-arrow-right text-cyan-400 group-hover:translate-x-1 transition"></i>
+      </a>
+
+      <!-- HOW TO USE -->
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6">
+        <div class="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
+          <i class="fas fa-book-open text-cyan-400 text-xs"></i>
+          <span class="text-xs font-bold text-white uppercase tracking-wider">How to use</span>
+        </div>
+        <div class="space-y-4">
+          <div class="flex gap-3 text-[11px] text-gray-400">
+            <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">1</span>
+            <div>
+              <p>Select Provider & Login below.</p>
+              <p class="text-[10px] text-green-500 mt-0.5"><i class="fas fa-shield-alt"></i> Safe: Official Garena Server (No Scam Risk)</p>
             </div>
-            <p class="text-[10px] text-gray-500">The tool will extract the eat token automatically</p>
+          </div>
+          <div class="flex gap-3 text-[11px] text-gray-400">
+            <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">2</span>
+            <div class="w-full">
+              <p class="mb-2">After login, copy the URL containing <code class="text-cyan-300">eat=</code> parameter</p>
+              <div class="bg-cyan-500/5 border border-cyan-500/10 p-2 rounded mb-2">
+                <p class="text-[10px] text-gray-400 mb-1">Example URL:</p>
+                <code class="text-[9px] text-gray-300 break-all block leading-tight">https://discstore.kiosgamer.com.id/?eat=14f060774299fb93a5...&lang=en&region=IND&account_id=7669969208&nickname=...</code>
+              </div>
+              <p class="text-[10px] text-gray-500">The tool will extract the eat token automatically</p>
+            </div>
+          </div>
+          <div class="flex gap-3 text-[11px] text-gray-400">
+            <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">3</span>
+            <p>Paste the URL or just the <strong class="text-white">Eat Token</strong> below and click GENERATE</p>
           </div>
         </div>
-        <div class="flex gap-3 text-[11px] text-gray-400">
-          <span class="bg-cyan-500/20 text-cyan-400 font-bold px-2 py-0.5 rounded text-[10px] h-fit mt-0.5">3</span>
-          <p>Paste the URL or just the <strong class="text-white">Eat Token</strong> below and click GENERATE</p>
+      </div>
+
+      <!-- PROVIDER LOGIN -->
+      <div class="mb-5">
+        <div class="flex justify-between items-end mb-2">
+          <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Select Provider & Login</span>
+        </div>
+        <div class="grid grid-cols-5 gap-2">
+          <a href="https://auth.garena.com/universal/oauth?platform=8&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center"><img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Google.png" class="w-5 h-5 object-contain" alt="Google"></a>
+          <a href="https://auth.garena.com/universal/oauth?platform=3&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center"><img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Facebook.png" class="w-5 h-5 object-contain" alt="Facebook"></a>
+          <a href="https://auth.garena.com/universal/oauth?platform=10&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center"><i class="fab fa-apple text-xl text-white"></i></a>
+          <a href="https://auth.garena.com/universal/oauth?platform=11&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center"><img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/X.png" class="w-5 h-5 object-contain rounded-full" alt="X"></a>
+          <a href="https://auth.garena.com/universal/oauth?platform=5&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center"><img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/VK.png" class="w-5 h-5 object-contain rounded-full" alt="VK"></a>
         </div>
       </div>
-    </div>
 
-    <div class="mb-5">
-      <div class="flex justify-between items-end mb-2">
-        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Select Provider & Login</span>
-      </div>
-      <div class="grid grid-cols-5 gap-2">
-        <a href="https://auth.garena.com/universal/oauth?platform=8&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Google.png" class="w-5 h-5 object-contain" alt="Google" />
-        </a>
-        <a href="https://auth.garena.com/universal/oauth?platform=3&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Facebook.png" class="w-5 h-5 object-contain" alt="Facebook" />
-        </a>
-        <a href="https://auth.garena.com/universal/oauth?platform=10&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center">
-          <i class="fab fa-apple text-xl text-white"></i>
-        </a>
-        <a href="https://auth.garena.com/universal/oauth?platform=11&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/X.png" class="w-5 h-5 object-contain rounded-full" alt="X" />
-        </a>
-        <a href="https://auth.garena.com/universal/oauth?platform=5&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https://api.ff.garena.co.id/auth/auth/callback_n?site=https://api-discountstore.kiosgamer.gameid.garena.co.id/oauth/callback_redirect/" target="_blank" class="social-icon-btn h-11 rounded-lg flex items-center justify-center">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/VK.png" class="w-5 h-5 object-contain rounded-full" alt="VK" />
-        </a>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <div class="relative group">
-        <input type="text" id="tokenInp" class="cyber-input w-full rounded-xl py-3.5 pl-4 pr-10 text-sm placeholder-gray-600" placeholder="Paste kiosgamer URL or Eat token here..." autocomplete="off" />
-        <button onclick="clearInput()" id="clearBtn" class="absolute right-3 top-3.5 text-gray-500 hover:text-red-500 transition hidden">
-          <i class="fas fa-times text-lg"></i>
-        </button>
-      </div>
-      <div class="flex justify-between mt-2">
-        <span class="text-[10px] text-gray-600">Supports full URL or raw token</span>
-      </div>
-    </div>
-
-    <button onclick="processToken()" id="btn" class="btn-grad w-full rounded-xl py-4 font-bold title-font text-white text-base tracking-widest flex items-center justify-center gap-2 mb-6">
-      GENERATE ACCESS <i class="fas fa-arrow-right text-xs"></i>
-    </button>
-
-    <div id="bannerContainer" class="hidden animate-in mb-6">
-      <div class="bg-black/40 border border-cyan-500/30 rounded-xl p-4">
-        <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-3 text-center">Player Banner</div>
-        <div id="bannerImageWrapper" class="flex justify-center">
-          <img id="bannerImage" src="" alt="Player Banner" class="rounded-lg w-full" style="max-height:200px;object-fit:contain;" />
+      <!-- INPUT -->
+      <div class="mb-5">
+        <div class="relative group">
+          <input type="text" id="tokenInp" class="cyber-input w-full rounded-xl py-3.5 pl-4 pr-10 text-sm placeholder-gray-600" placeholder="Paste kiosgamer URL or Eat token here..." autocomplete="off">
+          <button onclick="clearInput()" id="clearBtn" class="absolute right-3 top-3.5 text-gray-500 hover:text-red-500 transition hidden"><i class="fas fa-times text-lg"></i></button>
+        </div>
+        <div class="flex justify-between mt-2">
+          <span class="text-[10px] text-gray-600">Supports full URL or raw token</span>
         </div>
       </div>
-    </div>
 
-    <div id="output" class="hidden animate-in mb-6">
-      <div class="bg-black/40 border border-cyan-500/30 rounded-xl p-4 relative overflow-hidden">
+      <!-- GENERATE -->
+      <button onclick="processToken()" id="btn" class="btn-grad w-full rounded-xl py-4 font-bold title-font text-white text-base tracking-widest flex items-center justify-center gap-2 mb-6">
+        GENERATE ACCESS <i class="fas fa-arrow-right text-xs"></i>
+      </button>
 
-        <div class="info-grid">
-          <div class="info-item"><div class="label">Nickname</div><div class="value" id="nick">-</div></div>
-          <div class="info-item"><div class="label">Region</div><div class="value" id="reg">-</div></div>
-          <div class="info-item"><div class="label">Account UID</div><div class="value" id="aid">-</div></div>
-          <div class="info-item"><div class="label">Level</div><div class="value" id="level">-</div></div>
-        </div>
-
-        <div class="mb-4 mt-4">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">Extracted Access Token</span>
-            <button onclick="copyAccessTokenOnly()" id="copyTokenBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-              <i class="fas fa-copy text-[10px]"></i> COPY TOKEN
-            </button>
+      <!-- BANNER -->
+      <div id="bannerContainer" class="hidden animate-in mb-6">
+        <div class="bg-black/40 border border-cyan-500/30 rounded-xl p-4">
+          <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-3 text-center">Player Banner</div>
+          <div id="bannerImageWrapper" class="flex justify-center">
+            <img id="bannerImage" src="" alt="Player Banner" class="rounded-lg w-full" style="max-height:200px;object-fit:contain;">
           </div>
-          <div class="scroll-box-token" id="accessTokenDisplay">-</div>
         </div>
+      </div>
 
-        <div id="jwtContainer" class="mb-4 hidden">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">JWT Token</span>
-            <button onclick="copyJwtTokenOnly()" id="copyJwtBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-              <i class="fas fa-copy text-[10px]"></i> COPY JWT
-            </button>
+      <!-- OUTPUT -->
+      <div id="output" class="hidden animate-in mb-6">
+        <div class="bg-black/40 border border-cyan-500/30 rounded-xl p-4 relative overflow-hidden">
+          <div class="info-grid">
+            <div class="info-item"><div class="label">Nickname</div><div class="value" id="nick">-</div></div>
+            <div class="info-item"><div class="label">Region</div><div class="value" id="reg">-</div></div>
+            <div class="info-item"><div class="label">Account UID</div><div class="value" id="aid">-</div></div>
+            <div class="info-item"><div class="label">Level</div><div class="value" id="level">-</div></div>
           </div>
-          <div class="scroll-box" id="jwtTokenDisplay">-</div>
-        </div>
-
-        <div class="mb-2">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">Full API Response</span>
-            <button onclick="copyFullResponse()" id="copyFullResponseBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-              <i class="fas fa-copy text-[10px]"></i> COPY FULL
-            </button>
+          <div class="mb-4 mt-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">Extracted Access Token</span>
+              <button onclick="copyAccessTokenOnly()" id="copyTokenBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1"><i class="fas fa-copy text-[10px]"></i> COPY TOKEN</button>
+            </div>
+            <div class="scroll-box-token" id="accessTokenDisplay">-</div>
           </div>
-          <div class="scroll-box-large" id="apiResponseDisplay">Waiting for response...</div>
+          <div id="jwtContainer" class="mb-4 hidden">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">JWT Token</span>
+              <button onclick="copyJwtTokenOnly()" id="copyJwtBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1"><i class="fas fa-copy text-[10px]"></i> COPY JWT</button>
+            </div>
+            <div class="scroll-box" id="jwtTokenDisplay">-</div>
+          </div>
+          <div class="mb-2">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider">Full API Response</span>
+              <button onclick="copyFullResponse()" id="copyFullResponseBtn" class="text-[10px] bg-cyan-600/40 hover:bg-cyan-600 px-3 py-1.5 rounded-lg transition flex items-center gap-1"><i class="fas fa-copy text-[10px]"></i> COPY FULL</button>
+            </div>
+            <div class="scroll-box-large" id="apiResponseDisplay">Waiting for response...</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="error-box" class="hidden animate-in mb-6">
-      <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center">
-        <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-2"></i>
-        <h3 class="text-red-400 font-bold text-sm uppercase tracking-wider" id="error-title">Error</h3>
-        <p class="text-[10px] text-gray-500 mt-1" id="error-message">Please try again later.</p>
+      <!-- ERROR -->
+      <div id="error-box" class="hidden animate-in mb-6">
+        <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center">
+          <i class="fas fa-exclamation-triangle text-red-500 text-2xl mb-2"></i>
+          <h3 class="text-red-400 font-bold text-sm uppercase tracking-wider" id="error-title">Error</h3>
+          <p class="text-[10px] text-gray-500 mt-1" id="error-message">Please try again later.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="border-t border-white/5 pt-5">
-      <p class="text-[10px] text-gray-500 text-center uppercase tracking-widest mb-3">Connect With Narayan Verma</p>
-      <div class="grid grid-cols-2 gap-2">
-        <a href="https://t.me/KillerSharmaBot" target="_blank" class="flex items-center gap-2 p-2.5 rounded-xl bg-[#1a1a1a] hover:bg-[#29b6f6]/10 border border-white/5 hover:border-[#29b6f6]/30 transition group">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Telegram.png" class="w-6 h-6 rounded-full" alt="Telegram" />
-          <span class="text-xs font-medium text-gray-400 group-hover:text-white">Telegram</span>
-        </a>
-        <a href="https://youtube.com/@KillerSharmaBot" target="_blank" class="flex items-center gap-2 p-2.5 rounded-xl bg-[#1a1a1a] hover:bg-red-500/10 border border-white/5 hover:border-red-500/30 transition group">
-          <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/YouTube.png" class="w-6 h-6 rounded-full" alt="YouTube" />
-          <span class="text-xs font-medium text-gray-400 group-hover:text-white">YouTube</span>
-        </a>
-      </div>
-      <div class="text-center mt-4">
-        <button onclick="openModal('termsModal')" class="text-[10px] text-gray-600 hover:text-gray-400 underline transition">Terms & Conditions</button>
+      <!-- FOOTER - ONLY ICONS, NO TEXT -->
+      <div class="border-t border-white/5 pt-5">
+        <p class="text-[10px] text-gray-500 text-center uppercase tracking-widest mb-3">Connect With Narayan Verma</p>
+        <div class="grid grid-cols-2 gap-3">
+          <a href="https://t.me/Narayanverma123" target="_blank" class="social-icon-only">
+            <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/Telegram.png" alt="Telegram">
+          </a>
+          <a href="https://youtube.com/@Narayanverma123" target="_blank" class="social-icon-only">
+            <img src="https://raw.githubusercontent.com/KillerSharmaBot/Eat-Token/refs/heads/main/image/YouTube.png" alt="YouTube">
+          </a>
+        </div>
+        <div class="text-center mt-2">
+          <button onclick="openModal('termsModal')" class="text-[10px] text-gray-600 hover:text-gray-400 underline transition">Terms & Conditions</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- TERMS MODAL -->
-<div id="termsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4">
-  <div class="bg-[#0f0f13] border border-white/10 w-full max-w-sm rounded-2xl p-6 relative shadow-2xl">
-    <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white">
-      <i class="fas fa-times"></i>
-    </button>
-    <h3 class="text-lg font-bold text-white mb-4 title-font uppercase tracking-widest text-center">Terms & Conditions</h3>
-    <div class="text-xs text-gray-400 space-y-3 leading-relaxed font-light text-justify">
-      <p>This website does not store any sensitive details. We only store basic data to provide quality & fast service.</p>
-      <p class="text-cyan-400"><strong>Disclaimer:</strong> Use this tool at your own risk. The developer is not responsible for any misuse.</p>
-      <p style="color: red;">Do not use these tokens to <strong>Violate Garena Terms & Conditions</strong> and do not try any kind of automations</p>
-      <p>The Owner Of This Web Made This tool For Educational purpose for Devlopers</p>
-      <p>By using this website, you explicitly agree to our terms and conditions.</p>
+  <!-- MODAL -->
+  <div id="termsModal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="bg-[#0f0f13] border border-white/10 w-full max-w-sm rounded-2xl p-6 relative shadow-2xl">
+      <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-gray-500 hover:text-white"><i class="fas fa-times"></i></button>
+      <h3 class="text-lg font-bold text-white mb-4 title-font uppercase tracking-widest text-center">Terms & Conditions</h3>
+      <div class="text-xs text-gray-400 space-y-3 leading-relaxed font-light text-justify">
+        <p>This website does not store any sensitive details. We only store basic data to provide quality & fast service.</p>
+        <p class="text-cyan-400"><strong>Disclaimer:</strong> Use this tool at your own risk. The developer is not responsible for any misuse.</p>
+        <p style="color: red;">Do not use these tokens to <strong>Violate Garena Terms & Conditions</strong> and do not try any kind of automations</p>
+        <p>The Owner Of This Web Made This tool For Educational purpose for Devlopers</p>
+        <p>By using this website, you explicitly agree to our terms and conditions.</p>
+      </div>
+      <button onclick="closeModal('termsModal')" class="w-full mt-6 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition">I AGREE</button>
     </div>
-    <button onclick="closeModal('termsModal')" class="w-full mt-6 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition">I AGREE</button>
   </div>
-</div>
 
-<script>
-  (function() {
-    "use strict";
-
-    // DOM refs
+  <script>
+    let currentResponseData = null;
     const tokenInp = document.getElementById('tokenInp');
     const clearBtn = document.getElementById('clearBtn');
-    const btn = document.getElementById('btn');
-    const out = document.getElementById('output');
-    const errBox = document.getElementById('error-box');
-    const errorTitle = document.getElementById('error-title');
-    const errorMessage = document.getElementById('error-message');
-    const bannerContainer = document.getElementById('bannerContainer');
-    const jwtContainer = document.getElementById('jwtContainer');
 
-    const nickEl = document.getElementById('nick');
-    const regEl = document.getElementById('reg');
-    const aidEl = document.getElementById('aid');
-    const levelEl = document.getElementById('level');
-    const accessTokenDisplay = document.getElementById('accessTokenDisplay');
-    const jwtTokenDisplay = document.getElementById('jwtTokenDisplay');
-    const apiResponseDisplay = document.getElementById('apiResponseDisplay');
-    const bannerImage = document.getElementById('bannerImage');
+    tokenInp.addEventListener('input', function() {
+      if (tokenInp.value.length === 0) {
+        clearBtn.classList.add('hidden');
+      } else {
+        clearBtn.classList.remove('hidden');
+      }
+    });
 
-    const copyTokenBtn = document.getElementById('copyTokenBtn');
-    const copyJwtBtn = document.getElementById('copyJwtBtn');
-    const copyFullResponseBtn = document.getElementById('copyFullResponseBtn');
-
-    let currentResponseData = null;
-
-    // ---------- helpers ----------
     function clearInput() {
       tokenInp.value = '';
       clearBtn.classList.add('hidden');
       tokenInp.focus();
     }
 
+    tokenInp.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        processToken();
+      }
+    });
+
     function extractEatToken(input) {
       if (input.includes('eat=')) {
         const match = input.match(/[?&]eat=([^&]+)/);
-        if (match && match[1]) return match[1];
+        if (match && match[1]) {
+          return match[1];
+        }
       }
       return input;
     }
 
-    // ---------- copy functions ----------
+    function copyAccessTokenOnly() {
+      if (currentResponseData && currentResponseData.access_token) {
+        copyToClipboard(currentResponseData.access_token, document.getElementById('copyTokenBtn'), 'TOKEN COPIED!');
+      } else {
+        const displayElem = document.getElementById('accessTokenDisplay');
+        if (displayElem && displayElem.innerText !== '-' && displayElem.innerText !== '--' && displayElem.innerText !== 'No access_token field in response') {
+          copyToClipboard(displayElem.innerText, document.getElementById('copyTokenBtn'), 'TOKEN COPIED!');
+        } else {
+          alert('No access token available to copy');
+        }
+      }
+    }
+
+    function copyJwtTokenOnly() {
+      if (currentResponseData && currentResponseData.token) {
+        copyToClipboard(currentResponseData.token, document.getElementById('copyJwtBtn'), 'JWT COPIED!');
+      } else {
+        alert('No JWT token available to copy');
+      }
+    }
+
+    function copyFullResponse() {
+      const responseText = document.getElementById('apiResponseDisplay').innerText;
+      if (responseText && responseText !== "Waiting for response...") {
+        copyToClipboard(responseText, document.getElementById('copyFullResponseBtn'), 'FULL RESPONSE COPIED!');
+      } else {
+        alert('No response data to copy');
+      }
+    }
+
     function copyToClipboard(text, btnElement, successMsg) {
       if (!text) return;
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -539,44 +537,18 @@
       }, 2000);
     }
 
-    function copyAccessTokenOnly() {
-      if (currentResponseData && currentResponseData.access_token) {
-        copyToClipboard(currentResponseData.access_token, copyTokenBtn, 'TOKEN COPIED!');
-        return;
-      }
-      const displayText = accessTokenDisplay.innerText;
-      if (displayText && displayText !== '-' && displayText !== '--' && displayText !== 'No token in response') {
-        copyToClipboard(displayText, copyTokenBtn, 'TOKEN COPIED!');
-      } else {
-        alert('No access token available to copy');
-      }
-    }
-
-    function copyJwtTokenOnly() {
-      if (currentResponseData && currentResponseData.token) {
-        copyToClipboard(currentResponseData.token, copyJwtBtn, 'JWT COPIED!');
-      } else {
-        alert('No JWT token available to copy');
-      }
-    }
-
-    function copyFullResponse() {
-      const responseText = apiResponseDisplay.innerText;
-      if (responseText && responseText !== "Waiting for response...") {
-        copyToClipboard(responseText, copyFullResponseBtn, 'FULL RESPONSE COPIED!');
-      } else {
-        alert('No response data to copy');
-      }
-    }
-
-    // ---------- MAIN FIX: Use HTTPS proxy ----------
     async function processToken() {
       const input = tokenInp.value.trim();
+      const btn = document.getElementById('btn');
+      const out = document.getElementById('output');
+      const errBox = document.getElementById('error-box');
+      const errorTitle = document.getElementById('error-title');
+      const errorMessage = document.getElementById('error-message');
 
       out.classList.add('hidden');
       errBox.classList.add('hidden');
-      bannerContainer.classList.add('hidden');
-      jwtContainer.classList.add('hidden');
+      document.getElementById('bannerContainer').classList.add('hidden');
+      document.getElementById('jwtContainer').classList.add('hidden');
       currentResponseData = null;
 
       if (!input) {
@@ -595,9 +567,7 @@
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> GENERATING...';
       btn.disabled = true;
 
-      // ✅ FIX: Use HTTPS proxy to avoid mixed content blocking
-      // Using a free CORS proxy that supports HTTPS
-      const apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`http://185.93.69.64:25589/token?eat_token=${encodeURIComponent(eatToken)}`)}`;
+      const apiUrl = `http://185.93.69.64:25589/token?eat_token=${encodeURIComponent(eatToken)}`;
 
       try {
         const response = await fetch(apiUrl, {
@@ -613,20 +583,22 @@
         }
 
         currentResponseData = result;
-        apiResponseDisplay.innerText = JSON.stringify(result, null, 2);
+        document.getElementById('apiResponseDisplay').innerText = JSON.stringify(result, null, 2);
 
         const extractedToken = result.access_token || result.token || null;
-        accessTokenDisplay.innerText = extractedToken || 'No token in response';
+        if (extractedToken) {
+          document.getElementById('accessTokenDisplay').innerText = extractedToken;
+        } else {
+          document.getElementById('accessTokenDisplay').innerText = 'No token in response';
+        }
 
         const jwtToken = result.jwt || result.jwt_token || null;
         if (jwtToken) {
-          jwtTokenDisplay.innerText = jwtToken;
-          jwtContainer.classList.remove('hidden');
-        } else {
-          jwtContainer.classList.add('hidden');
+          document.getElementById('jwtTokenDisplay').innerText = jwtToken;
+          document.getElementById('jwtContainer').classList.remove('hidden');
         }
 
-        if (result.error === "Check Your access Token") {
+        if (result.error == "Check Your access Token") {
           errorTitle.innerText = 'Invalid Token';
           errorMessage.innerText = 'Your access token or eat token is invalid. Please login again to get a new token.';
           errBox.classList.remove('hidden');
@@ -643,21 +615,26 @@
           return;
         }
 
-        nickEl.innerText = result.nickname || (result.accountId ? 'User ' + result.accountId : '-');
-        regEl.innerText = result.lockRegion || result.noti_region || result.region || '-';
-        aidEl.innerText = result.accountId || result.account_id || result.uid || '-';
-        levelEl.innerText = result.level || '-';
+        if (result.nickname) document.getElementById('nick').innerText = result.nickname;
+        else if (result.accountId) document.getElementById('nick').innerText = 'User ' + result.accountId;
+
+        if (result.lockRegion) document.getElementById('reg').innerText = result.lockRegion;
+        else if (result.noti_region) document.getElementById('reg').innerText = result.noti_region;
+        else if (result.region) document.getElementById('reg').innerText = result.region;
+
+        if (result.accountId) document.getElementById('aid').innerText = result.accountId;
+        else if (result.account_id) document.getElementById('aid').innerText = result.account_id;
+        else if (result.uid) document.getElementById('aid').innerText = result.uid;
+
+        if (result.level) document.getElementById('level').innerText = result.level;
 
         if (result.headPic && result.bannerId && result.nickname && result.level) {
           const bannerUrl = `https://image.killersharmabot.online/banner-image?headPic=${result.headPic}&bannerId=${result.bannerId}&name=${encodeURIComponent(result.nickname)}&level=${result.level}`;
-          bannerImage.src = bannerUrl;
-          bannerContainer.classList.remove('hidden');
-        } else {
-          bannerContainer.classList.add('hidden');
+          document.getElementById('bannerImage').src = bannerUrl;
+          document.getElementById('bannerContainer').classList.remove('hidden');
         }
 
         out.classList.remove('hidden');
-
       } catch (error) {
         console.error('Fetch error:', error);
         errorTitle.innerText = 'Network Error';
@@ -669,48 +646,20 @@
       btn.disabled = false;
     }
 
-    // ---------- modal ----------
     function openModal(id) {
       document.getElementById(id).classList.add('active');
     }
     function closeModal(id) {
       document.getElementById(id).classList.remove('active');
     }
-
-    // ---------- event listeners ----------
-    tokenInp.addEventListener('input', function() {
-      if (tokenInp.value.length === 0) {
-        clearBtn.classList.add('hidden');
-      } else {
-        clearBtn.classList.remove('hidden');
-      }
-    });
-
-    tokenInp.addEventListener("keypress", function(event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        processToken();
-      }
-    });
-
-    document.querySelectorAll('.modal-overlay').forEach(modal => {
-      modal.addEventListener('click', function(e) {
+    const modals = document.querySelectorAll('.modal-overlay');
+    for (let i = 0; i < modals.length; i++) {
+      modals[i].addEventListener('click', function(e) {
         if (e.target === this) {
           this.classList.remove('active');
         }
       });
-    });
-
-    window.processToken = processToken;
-    window.clearInput = clearInput;
-    window.openModal = openModal;
-    window.closeModal = closeModal;
-    window.copyAccessTokenOnly = copyAccessTokenOnly;
-    window.copyJwtTokenOnly = copyJwtTokenOnly;
-    window.copyFullResponse = copyFullResponse;
-
-  })();
-</script>
-
+    }
+  </script>
 </body>
 </html>
